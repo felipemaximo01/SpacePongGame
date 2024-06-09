@@ -42,26 +42,35 @@ vertical_alignment = 1
 
 [node name="Player" parent="." instance=ExtResource("2_ng8go")]
 position = Vector2(270, 887)
+collision_mask = 6
 
 [node name="TopWall" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopWall"]
 position = Vector2(266.5, -10)
 shape = SubResource("RectangleShape2D_j7cj6")
 
 [node name="LeftWall" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
 position = Vector2(-10, 470.5)
 shape = SubResource("RectangleShape2D_ryx4r")
 
 [node name="RightWall" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
 position = Vector2(550, 469.75)
 shape = SubResource("RectangleShape2D_ryx4r")
 
 [node name="Hole" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hole"]
 position = Vector2(266.5, 970)
@@ -70,6 +79,8 @@ debug_color = Color(0.68193, 0, 0.12125, 0.419608)
 
 [node name="Ball" parent="." instance=ExtResource("3_376gp")]
 position = Vector2(270, 850)
+collision_layer = 2
+collision_mask = 29
 
 [node name="Tutorial" type="Label" parent="."]
 offset_right = 541.0
