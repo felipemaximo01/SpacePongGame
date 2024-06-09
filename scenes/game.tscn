@@ -79,4 +79,23 @@ label_settings = SubResource("LabelSettings_k54qw")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Positions" type="Node2D" parent="."]
+
+[node name="Pos_01" type="Marker2D" parent="Positions"]
+position = Vector2(638, 248)
+
+[node name="Pos_02" type="Marker2D" parent="Positions"]
+position = Vector2(-100, 364)
+
+[node name="Pos_03" type="Marker2D" parent="Positions"]
+position = Vector2(-98, 172)
+
+[node name="Pos_04" type="Marker2D" parent="Positions"]
+position = Vector2(644, 78)
+
+[node name="TimerSpawner" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
 [connection signal="body_entered" from="Hole" to="." method="_on_hole_body_entered"]
+[connection signal="timeout" from="TimerSpawner" to="." method="_on_timer_spawner_timeout"]
